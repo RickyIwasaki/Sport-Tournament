@@ -1,0 +1,91 @@
+
+/*
+    ----------------------------------------------------------------
+    animation 
+*/
+
+/* 
+    ----------------------------------------------------------------
+    general
+*/
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: roboto-mono-regular;
+    color: #3a3a3a;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+}
+
+.main h1{
+    margin: 40px 20px 0 0;
+    font-size: 36px;
+}
+
+.header i{
+    margin: 40px 15px 0 15px;
+    font-size: 32px;
+    color: #3a3a3a;
+}
+
+.header i:hover{
+    text-shadow: 0 0 15px #3cdbec;
+}
+
+.header i:active{
+    color: #777f80;
+}
+
+.main h2{
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.main table{
+    width: 100%;
+}
+
+.main label{
+    font-size: 24px;
+    color: #3a3a3a;
+}
+
+.main div form input{
+    width: 300px;
+    padding: 3px; 
+    margin: 5px;
+    outline: none;
+    font-size: 18px;
+    color: #3a3a3a;
+}
+
+.main div form input:hover{
+    padding: 4px; 
+    border: solid 1px #828282;
+    background-color: #e5e5e5;
+}
+
+.main div form input:active{
+    padding: 4px; 
+    border: solid 1px #828282;
+    box-shadow: 0 0 10px 2px #99f1fa;
+}
+
+.main button{
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    font-family: roboto-mono-regular;
+    font-size: 20px;
+    color: #3a3a3a;
+}
+
+.main button:active{
+    box-shadow: 0 0 10px 2px #99f1fa;
+}
+

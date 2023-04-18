@@ -1,0 +1,121 @@
+
+/*
+    ----------------------------------------------------------------
+    animation 
+*/
+
+/* 
+    ----------------------------------------------------------------
+    general
+*/
+
+.create-form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: roboto-mono-regular;
+}
+
+.create-form h1{
+    font-size: 42px;
+    color: #3a3a3a;
+}
+
+.create-form p{
+    font-size: 24px;
+    color: #b83f3f;
+}
+
+.create-form table{
+    width: 100%;
+}
+
+.create-form label{
+    margin: 5px;
+    font-size: 24px;
+    color: #3a3a3a;
+}
+
+.create-form label:active{
+    text-shadow: 0 0 10px #99f1fa;
+}
+
+.create-form input{
+    width: 100%;
+    padding: 3px; 
+    outline: none;
+    font-size: 18px;
+    color: #3a3a3a;
+}
+
+.create-form input:hover{
+    padding: 4px; 
+    border: solid 1px #828282;
+    background-color: #e5e5e5;
+}
+
+.create-form input:active{
+    padding: 3px; 
+    margin: 1px;
+    border: solid 1px #828282;
+    box-shadow: 0 0 10px 2px #99f1fa;
+    background-color: transparent;
+}
+
+.create-form select{
+    width: 100%;
+    padding: 3px; 
+    outline: none;
+    font-size: 18px;
+    color: #3a3a3a;
+}
+
+.create-form select:hover{
+    padding: 3px; 
+    border: solid 1px #828282;
+    background-color: #e5e5e5;
+}
+
+.create-form select:active{
+    padding: 3px; 
+    border: solid 1px #828282;
+    box-shadow: 0 0 10px 2px #99f1fa;
+    background-color: transparent;
+}
+
+.create-form textarea{
+    width: 100%;
+    padding: 3px; 
+    outline: none;
+    font-size: 18px;
+    color: #3a3a3a;
+}
+
+.create-form textarea:hover{
+    padding: 3px; 
+    border: solid 1px #828282;
+    background-color: #e5e5e5;
+}
+
+.create-form textarea:active{
+    padding: 3px; 
+    border: solid 1px #828282;
+    box-shadow: 0 0 10px 2px #99f1fa;
+    background-color: transparent;
+}
+
+.create-form button{
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    font-family: roboto-mono-regular;
+    font-size: 20px;
+    color: #3a3a3a;
+}
+
+.create-form button:active{
+    box-shadow: 0 0 10px 2px #99f1fa;
+}
+
+

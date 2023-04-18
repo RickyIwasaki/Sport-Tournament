@@ -1,0 +1,30 @@
+
+{% extends 'base.html' %}
+
+{% block links %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/games/join.css') }}">
+{% endblock %}
+
+{% block contents %}
+  <form class="create-form" method="POST">
+    <div>
+      <h1>Join</h1>
+      {{ result_error }}
+      <div> 
+        <table>
+          <tr>
+            <td><label for="team">team</label></td>
+            <td>
+              <select name="team" id="team">
+                {% for team in teams %}
+                  <option>{{ team.id }} : {{ team.name }}</option>
+                {% endfor %}
+              </select>
+            </td>
+          </tr>
+        </table>  
+        <button>join</button>
+      </div>
+    </div>
+  </form>
+{% endblock %}

@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+
+{% block links %} 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tournament_types/tournament_types_create.css') }}">
+{% endblock %}
+
+{% block contents %}
+    <div class="form-container">
+        <form method="POST">
+            <h1>Create Tournament Type</h1>
+            <table>
+                <tr>
+                    <td><label for="tournament_type">type</label></td>
+                    <td><input type="text" name="tournament_type" id="tournament_type" placeholder="tournament type"></td>
+                </tr>
+            </table> 
+            <button id="add-status-input">add status input box</button>
+            <table id="type_status_list"></table>  
+            <button>create</button>
+        </form>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='javascript/tournament_types/tournament_types_create.js') }}"></script>
+{% endblock %}

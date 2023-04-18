@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+
+{% block links %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/tournament_types/tournament_types.css') }}">
+{% endblock %}
+
+{% block contents %}
+  <div class="main">
+    <div class="list_header">
+      <h1>Tournament Types</h1>
+      <a href="/tournament_types/create"><i class="fa-solid fa-plus"></i></a>
+      <!-- <input type="text" placeholder="search">
+    	<button>search</button> -->
+    </div>
+    <div class="list">
+      {% for tournament_type in tournament_types %} 
+        <a href="tournament_types/{{ tournament_type.id }}">
+          <div>
+            <p>{{ tournament_type.name }}</p>
+            <span>{{ tournament_type.statuses|length }}</span>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block scripts %} 
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+{% endblock %}

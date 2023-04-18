@@ -1,0 +1,42 @@
+
+{% extends 'base.html' %}
+
+{% block links %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/tournaments/tournaments.css') }}">
+{% endblock %}
+
+{% block contents %}
+  <div class="main">
+    <div class="list_header">
+      <h1>Tournaments</h1>
+        <a href="/tournaments/create"><i class="fa-solid fa-plus"></i></a>
+        <div>
+          <input type="checkbox" id="publicly_open">
+          <label for="publicly_open">publicly open</label>
+      	</div>
+      <div>
+        <input type="checkbox" id="private">
+        <label for="private">private</label>
+      </div>
+      <!-- <div>
+        <input type="checkbox" id="friends_open">
+        <label for="friends_open">friends open</label>
+      </div>
+      <div>
+        <input type="checkbox" id="friends_close">
+        <label for="friends_close">friends close</label>
+      </div>
+      <input type="text" placeholder="search">
+    	<button>search</button> -->
+    </div>
+    <div class="list">
+      <div id="list-display"></div>
+      <div class="list-footer"></div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block scripts %} 
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="{{ url_for('static', filename='javascript/tournaments/tournaments.js') }}"></script>
+{% endblock %}

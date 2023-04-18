@@ -1,0 +1,76 @@
+
+/*
+    ----------------------------------------------------------------
+    animation 
+*/
+
+/* 
+    ----------------------------------------------------------------
+    general
+*/
+
+.main{
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: roboto-mono-regular;
+    color: #3a3a3a;
+}
+
+.main h1{
+    font-size: 36px;
+}
+
+.sport_news_list a{
+    text-decoration: none;
+}
+
+.row{
+    padding: 20px;
+    background-color: #bfd7ff;
+    color: #3a3a3a;
+}
+
+.row:hover{
+    background-color: #c8daf6;
+}
+
+.row:active{
+    background-color: #d4dff1;
+}
+
+.title{
+    margin: 0;
+    font-size: 28px;
+}
+
+.name{
+    color: #295f5f;
+    font-size: 24px;
+}
+
+.author{
+    font-size: 24px;
+    text-shadow: 0 0 10px #99f1fa;
+}
+
+.publishedAt{
+    padding: 5px;
+    border-radius: 15px;
+    background-color: #f3f69f;
+    font-size: 18px;
+}
+
+.content{
+    font-size: 18px;
+    color: #7a7e86;
+}
+
+.description{
+    font-size: 18px;
+    color: #5e6165;
+}
+
+
+

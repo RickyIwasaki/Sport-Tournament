@@ -1,0 +1,79 @@
+
+{% extends 'base.html' %}
+
+{% block links %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/games/game_edit.css') }}">
+{% endblock %}
+
+{% block contents %}
+  <form class="create-form" method="POST">
+    <div>
+      <div class="form-header">
+          <h1>Edit Game</h1>
+          <a href="/games/delete/{{ game.id }}"><i class="fa-solid fa-trash"></i></a>
+      </div>
+      {% if result_error != '' %}
+        <p>{{ result_error }}</p>
+      {% endif %}
+      <div>
+        <table>
+          <tr>
+            <td><label for="name">Game name</label></td>
+            <td><input type="text" name="name" id="name" value="{{ game.name}}"></td>
+          </tr>
+          <tr>
+            <td><label for="sport">sport</label></td>
+            <td>
+              <select name="sport" id="sport">
+                {% for sport in sports %}
+                  <option{% if sport.id == game.sport_id %} selected{% endif %}>{{ sport.name }}</option>
+                {% endfor %}
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="place">location</label></td>
+            <td><input type="text" name="place" id="place" value="{{ game.place }}"></td>
+          </tr>
+          <tr>
+            <td><label for="time">time</label></td>
+            <td><input type="text" name="time" id="time" value="{{ game.set_time}}"></td>
+          </tr>
+          <tr>
+          <tr>
+            <td><label for="status">status</label></td>
+            <td>
+              <select name="status" id="status">
+                {% for status in statuses %}
+                  <option{% if status == game.status %} selected{% endif %}>{{ status }}</option>
+                {% endfor %}
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="tournament">tournament</label></td>
+            <td>
+              <select name="tournament" id="tournament">
+                {% for tournament in tournaments %}
+                  <option{% if tournament_to_game.tournament_id == tournament.id %} selected{% endif %}>{{ tournament.id }} : {{ tournament.name }}</option>
+                {% endfor %}
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="tournament_game_status">tournament game status</label></td>
+            <td>
+              <select name="tournament_game_status" id="tournament_game_status"></select>
+            </td>
+          </tr>
+        </table>  
+        <button>change</button>
+      </div>
+    </div>
+  </form>
+{% endblock %}
+
+{% block scripts %} 
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="{{ url_for('static', filename='javascript/games/game_edit.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,121 @@
+
+/*
+    ----------------------------------------------------------------
+    animation 
+*/
+
+/* 
+    ----------------------------------------------------------------
+    general
+*/
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: roboto-mono-regular;
+    color: #3a3a3a;
+}
+
+.main-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-header h1{
+    font-size: 36px;
+    margin: 10px;
+}
+
+.main-header h2{
+    font-size: 32px;
+    margin: 10px;
+}
+
+.main-header i{
+    font-size: 32px;
+    color: #3a3a3a;
+}
+
+.main-header i:hover{
+    text-shadow: 0 0 15px #3cdbec;
+}
+
+.main-header i:active{
+    color: #777f80;
+}
+
+.fa-clipboard{
+    margin: 10px;
+}
+
+.main h3{
+    font-size: 24px;
+}
+
+.main p{
+    font-size: 18px;
+}
+
+.creator{
+    padding: 10px;
+    margin: 0;
+    border-radius: 15px;
+    background-color: #f3f69f;
+    font-size: 22px;
+}
+
+.detail{
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #909696;
+    color: #afe6ed;
+    font-size: 18px;
+}
+
+.team-list a {
+    text-decoration: none;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    background-color: #7183a9;
+    color: #efefef;
+    box-shadow: 0 0 3px 1px #3a3a3a;
+}
+
+.row:hover{
+    background-color: #7c89a3;
+}
+
+.row:active{
+    box-shadow: 0 0 10px 1px #99f1fa;
+}
+
+.team-name{
+    margin: 20px;
+    text-shadow: 0 0 10px #99f1fa;
+    font-size: 20px;
+}
+
+.join{
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #f3f69f;
+    font-size: 24px;
+    color: #3a3a3a;
+}
+
+.join:hover{
+    background-color: #dae295;
+}
+
+.join:active{
+    background-color: #e7ecbd;
+}
+
+.main a{
+    text-decoration: none;
+}

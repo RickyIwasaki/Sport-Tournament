@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+
+{% block links %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/sports/sports.css') }}">
+{% endblock %}
+
+{% block contents %}
+  <div class="main">
+    <div class="list_header">
+      <h1>Sports</h1>
+      <a href="/sports/create"><i class="fa-solid fa-plus"></i></a>
+      <!-- <input type="text" placeholder="search">
+    	<button>search</button> -->
+    </div>
+    <div class="list">
+      {% for sport in sports %} 
+        <a href="sports/{{ sport.id }}"><p>{{ sport.name }}</p></a>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block scripts %} 
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>  
+  <script src="{{ url_for('static', filename='javascript/sports/sports.js') }}"></script>
+{% endblock %}

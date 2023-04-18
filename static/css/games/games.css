@@ -1,0 +1,176 @@
+
+/*
+    ----------------------------------------------------------------
+    animation 
+*/
+
+/* 
+    ----------------------------------------------------------------
+    general
+*/
+
+.main{
+    font-family: roboto-mono-regular;
+}
+
+.list_header{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list_header h1{
+    margin: 20px;
+    font-size: 36px;
+    color: #3a3a3a;
+}
+
+.list_header i{
+    margin: 5px;
+    font-size: 32px;
+    color: #3a3a3a;
+}
+
+.list_header i:hover{
+    cursor: pointer;
+}
+
+.list_header i:active{
+    text-shadow: 0 0 10px #99f1fa;
+}
+
+.list_header div{
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 0 1px 0.1px #3a3a3a;
+    font-size: 18px;
+    color: #3a3a3a;
+}
+
+.list_header div input[type='checkbox']:hover{
+    box-shadow: 0 0 2px 1px #d5d6d6;
+}
+
+.list_header div input[type='checkbox']:active{
+    box-shadow: 0 0 10px 2px #99f1fa;
+}
+
+.list_header div label:hover{
+    text-shadow: 0 0 10px #99f1fa;
+}
+
+.list_header div label:active{
+    color: black;
+}
+
+.list_header input[type='text']{
+    padding: 10px;
+    margin: 10px;
+    border: 0;
+    outline: none;
+    box-shadow: 0 0 1px 0.1px #3a3a3a;
+    font-size: 18px;
+    color: #3a3a3a;
+}
+
+.list_header input[type='text']:hover{
+    background-color: #e3ecec;
+}
+
+.list_header input[type='text']:focus{
+    background-color: transparent;
+    box-shadow: 0 0 10px 1px #99f1fa;
+}
+
+.list_header button{
+    padding: 10px;
+    margin: 10px;
+    border: 0;
+    outline: none;
+    box-shadow: 0 0 1px 0.1px #3a3a3a;
+    font-size: 18px;
+    color: #3a3a3a;
+}
+
+.list_header button:hover{
+    background-color: #e3ecec;
+}
+
+.list_header button:active{
+    background-color: transparent;
+    box-shadow: 0 0 10px 1px #99f1fa;
+}
+
+.list a{
+    text-decoration: none;
+}
+
+.row{
+    background-color: #bfd7ff;
+}
+
+.row:hover{
+    background-color: #c8daf6;
+}
+
+.row:active{
+    background-color: #d4dff1;
+}
+
+.row div{
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+}
+
+.row-name{
+    margin: 20px 5px 20px 5px;
+    text-shadow: 0 0 10px #99f1fa;
+    font-size: 18px;
+    color: #3a3a3a;
+}
+
+.row-id{
+    margin: 5px;
+    font-size: 16px;
+    color: #838994;
+}
+
+.row-tournament{
+    padding: 5px;
+    margin: 5px;
+    border-radius: 15px;
+    background-color: #909696;
+    color: #54d8e9;
+    font-size: 16px;
+}
+
+.row-tournament-type{
+    padding: 2px;
+    margin: 5px;
+    background-color: #e8f5f8;
+    font-size: 16px;
+    color: #455356;
+}
+
+.row-sport{
+    margin: 5px;
+    color: #295f5f;
+}
+
+.row-creator{
+    padding: 5px;
+    margin: 5px; 
+    border-radius: 15px;
+    background-color: #f3f69f;
+    font-size: 16px;
+    color: #3a3a3a;
+}
+
+.row-status{
+    margin: 5px;
+    color: #295f5f;
+    font-size: 16px;
+}

@@ -1,0 +1,29 @@
+
+{% extends 'base.html' %}
+
+{% block links %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/teams/team.css') }}">
+{% endblock %}
+
+{% block contents %}
+  <div class="main">
+    <div>
+      <h1>Team {% if is_creator %}<a href="/teams/edit/{{ team.id }}"><i class="fa-solid fa-pen-to-square"></i></a> {% endif %}<span id="team_id">{{ team.id }}</span></h1>
+      <a href="/teams/join/{{ team.id }}"><p class="join">join</p></a>
+      <h2>{{ team.name }}</h2>
+      <p><span class="status">{{ team['status'] }}</span></p>
+      <div><span>Team Creator: {{ user.username }}</span></div>
+      <p class="description">{{ team.description }}</p>
+      <div class="teammate-list">
+        {% for teammate in teammates %} 
+          <a href="/users/{{ teammate.user_id }}">
+            <div class="row">
+              <p class="teammate-username">{{ teammate.username }}</p>
+              <p class="teammate-id">{{ teammate.user_id }}</p>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,35 @@
+
+{% extends 'base.html' %}
+
+{% block links %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/tournaments/tournament.css') }}">
+{% endblock %}
+
+{% block contents %}
+  <div class="main">
+    <div>
+      <h1>Tournament {% if is_creator %}<a href="/tournaments/edit/{{ tournament['id'] }}"><i class="fa-solid fa-pen-to-square"></i></a> {% endif %}<span id="tournament_id">{{ tournament['id'] }}</span> <i class="fa-solid fa-clipboard"></i></h1>
+      <h2>{{ tournament['name'] }}</h2>
+      <p><span class="status">{{ tournament['status'] }}</span> : <span class="type">{{ tournament_type }}</span></p>
+      <div><span>Tournament Creator: {{ creator }}</span></div>
+      <p class="description">{{ tournament['description'] }}</p>
+      {% if is_creator %} 
+        <div class="game-list">
+          {% for game in games %} 
+            <a href="/games/{{ game.id }}">
+              <div class="row">
+                <p class="game-name">{{ game.name }}</p>
+                <p class="game-status">{{ game.status }}</p>
+                <p class="game-result">{{ game.result }}</p>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block scripts %} 
+  <script src="{{ url_for('static', filename='javascript/tournaments/tournament.js') }}"></script>
+{% endblock %}

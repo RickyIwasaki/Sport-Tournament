@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sport Tournament</title>
+  <link rel="icon" href="{{ url_for('static', filename='image\favicon.ico') }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+  {% block links %}{% endblock %}
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-title">
+      <a href="/"><div>sport tournament</div></a>
+    </div>
+  	<div class="navbar-items">
+      {% if is_developer %} 
+        <a href="/tournament_types"><div>tournament types</div></a>
+      {% endif %}
+    	<a href="/tournaments"><div>tournaments</div></a>
+      {% if is_developer %} 
+        <a href="/sports"><div>sports</div></a>
+      {% endif %}
+    	<a href="/games"><div>games</div></a>
+    	<a href="/teams"><div>teams</div></a>
+      <!-- <a href="/users"><div>users</div></a> -->
+      <!-- <a href="/account"><div>account</div></a> -->
+      <a href="/logout"><div>logout</div></a>
+    </div>
+  </div>
+  {% block contents %}{% endblock %}
+  <script src="https://kit.fontawesome.com/c3ccc50b77.js" crossorigin="anonymous"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

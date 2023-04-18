@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sport Tournament</title>
+  <link rel="icon" href="{{ url_for('static', filename='image\favicon.ico') }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/users/entry.css') }}">
+</head>
+<body>
+  <a href="/"><i class="fa-regular fa-square-caret-left"></i></a>
+  <form method="POST">
+    <h1>Sport Tournament</h1>
+    <h2 id="sub-title">Sign in</h2>
+    <div>
+      <a href="/login">login</a>
+      <span>{{ result_error }}</span>
+      {{ form.hidden_tag() }}
+    </div>
+    <table>
+      {% for field in form if field.widget.input_type != 'hidden' %}
+        <tr>
+          <td>{{ field.label }}</td>
+          <td>{{ field(placeholder = field.label.text) }}</td>
+          <td>
+            {% for error in field.errors %}
+              <span>{{ error }}</span>
+            {% endfor %}
+          </td>
+        </tr>
+      {% endfor %}
+    </table>  
+    <button>sign in</button>
+  </form>
+  <script src="https://kit.fontawesome.com/c3ccc50b77.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+{% extends 'base.html' %}
+
+{% block links %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/teams/team_edit.css') }}">
+{% endblock %}
+
+{% block contents %}
+  <form class="create-form" method="POST">
+    <div>
+        <div class="form-header">
+            <h1>Edit Team</h1>
+            <a href="/teams/delete/{{ team.id }}"><i class="fa-solid fa-trash"></i></a>
+        </div>
+      {{ form.hidden_tag() }}
+      <div> 
+        </div>
+        <table>
+            {% for field in form if field.widget.input_type != 'hidden' %}
+            <tr>
+                <td>{{ field.label }}</td>
+                <td>{{ field(placeholder = field.label.text) }}</td>
+                <td>
+                {% for error in field.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>  
+        <button>change</button>
+      </div>
+    </div>
+  </form>
+{% endblock %}

@@ -1,0 +1,140 @@
+
+/*
+    ----------------------------------------------------------------
+    animation 
+*/
+
+/* 
+    ----------------------------------------------------------------
+    general
+*/
+
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: roboto-mono-regular;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+}
+
+.header i{
+    margin-left: 10px;
+    font-size: 32px;
+    color: #3a3a3a;
+}
+
+.header i:hover{
+    text-shadow: 0 0 15px #3cdbec;
+}
+
+.header i:active{
+    color: #777f80;
+}
+
+form h1{
+    font-size: 42px;
+    color: #3a3a3a;
+}
+
+form p{
+    font-size: 24px;
+    color: #b83f3f;
+}
+
+form table{
+    width: 100%;
+}
+
+form label{
+    margin: 5px;
+    font-size: 24px;
+    color: #3a3a3a;
+}
+
+form label:active{
+    text-shadow: 0 0 10px #99f1fa;
+}
+
+form input{
+    width: 300px;
+    padding: 3px; 
+    outline: none;
+    font-size: 18px;
+    color: #3a3a3a;
+}
+
+form input:hover{
+    padding: 4px; 
+    border: solid 1px #828282;
+    background-color: #e5e5e5;
+}
+
+form input:focus{
+    padding: 3px; 
+    margin: 1px;
+    border: solid 1px #828282;
+    box-shadow: 0 0 10px 2px #99f1fa;
+    background-color: transparent;
+}
+
+form select{
+    width: 100%;
+    padding: 3px; 
+    outline: none;
+    font-size: 18px;
+    color: #3a3a3a;
+}
+
+form select:hover{
+    padding: 3px; 
+    border: solid 1px #828282;
+    background-color: #e5e5e5;
+}
+
+form select:active{
+    padding: 3px; 
+    border: solid 1px #828282;
+    box-shadow: 0 0 10px 2px #99f1fa;
+    background-color: transparent;
+}
+
+form textarea{
+    width: 100%;
+    padding: 3px; 
+    outline: none;
+    font-size: 18px;
+    color: #3a3a3a;
+}
+
+form textarea:hover{
+    padding: 3px; 
+    border: solid 1px #828282;
+    background-color: #e5e5e5;
+}
+
+form textarea:focus{
+    padding: 3px; 
+    border: solid 1px #828282;
+    box-shadow: 0 0 10px 2px #99f1fa;
+    background-color: transparent;
+}
+
+button{
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    font-family: roboto-mono-regular;
+    font-size: 20px;
+    color: #3a3a3a;
+}
+
+button:active{
+    box-shadow: 0 0 10px 2px #99f1fa;
+}
+
+

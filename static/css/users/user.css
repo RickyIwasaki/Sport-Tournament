@@ -1,0 +1,58 @@
+
+/*
+    ----------------------------------------------------------------
+    animation 
+*/
+
+/* 
+    ----------------------------------------------------------------
+    general
+*/
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: roboto-mono-regular;
+    color: #3a3a3a;
+}
+
+.main h1{
+    font-size: 36px;
+}
+
+.main h1 span{
+    font-size: 18px;
+    font-weight: normal;
+    color: #838994;
+}
+
+.main a{
+    text-decoration: none;
+}
+
+.friend_status{
+    padding: 10px;
+    color: #3a3a3a;
+}
+
+.friend_status:hover{
+    text-shadow: 0 0 15px #3cdbec;
+}
+
+.friend_status:active{
+    color: #777f80;
+}
+
+.user_region{
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #f3f69f;
+    font-size: 24px;
+}
+
+.user_bio{
+    max-width: 500px;
+    font-size: 18px;
+    color: #7c7c7c;
+}

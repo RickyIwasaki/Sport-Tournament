@@ -1,0 +1,30 @@
+
+{% extends 'base.html' %}
+
+{% block links %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/users/user.css') }}">
+{% endblock %}
+
+{% block contents %}
+  <div class="main">
+    <div>
+      <h1>User <span id="user_id">{{ user.id }}</span> <i class="fa-solid fa-clipboard"></i></h1>
+      <div>
+        <h2>{{ user.username }}</h2>
+        {% if friend.status == '' %}
+          <a href="/friends/request/{{ user.id }}"><p class="friend_status">friend request +</p></a>
+        {% elif friend.status == 'requesting' %}
+          <a href="/friends/cancel/{{ user.id }}"><p class="friend_status">cancel request</p></a>
+        {% else %}
+          <a href="/friends/unfriend/{{ user.id }}"><p class="friend_status">friends</p></a>
+        {% endif %}
+      </div>
+      <p><span class="user_region">{{ user.region }}</span>
+      <p><span class="user_bio">{{ user.bio }}</span>
+    </div>
+  </div>
+{% endblock %}
+
+{% block scripts %} 
+  <script src="{{ url_for('static', filename='javascript/users/user.js') }}"></script>
+{% endblock %}

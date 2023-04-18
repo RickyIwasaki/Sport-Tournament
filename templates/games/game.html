@@ -1,0 +1,43 @@
+
+{% extends 'base.html' %}
+
+{% block links %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/games/game.css') }}">
+{% endblock %}
+
+{% block contents %}
+  <div class="main">
+    <div>
+      <div class="main-header">
+        <h1>Game</h1>
+        {% if is_creator %}
+          <a href="/games/edit/{{ game['id'] }}"><i class="fa-solid fa-pen-to-square"></i></a> 
+        {% endif %}
+        <h2>{{ tournament['name'] }}</h2>
+        <p id="game_id">{{ game['id'] }}</p>
+        <i class="fa-solid fa-clipboard"></i>
+      </div>
+      <a href="/games/join/{{ game['id']}}"><p class="join">join</p></a>
+      <h3>{{ game['name'] }}</h3>
+      <p class="creator">Game Creator: {{ user.username }}</p>
+      <p class="detail">{{ tournament_type.name }} : {{ tournament_to_game['status'] }} : {{ sport['name'] }}</p>
+      <p>{{ game['status'] }} : {{ game['result'] }} : {{ game['place'] }} : {{ game['set_time'] }}</p> 
+      {% if is_creator %} 
+        <div class="team-list">
+          {% for team in teams %} 
+            <a href="/teams/{{ team.id }}">
+              <div class="row">
+                <p class="team-name">{{ team.name }}</p>
+                <p class="team-id">{{ team.id }}</p>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block scripts %} 
+  <script src="{{ url_for('static', filename='javascript/games/game.js') }}"></script>
+{% endblock %}

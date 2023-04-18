@@ -1,0 +1,49 @@
+
+{% extends 'base.html' %}
+
+{% block links %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/tournaments/tournament_create.css') }}">
+{% endblock %}
+
+{% block contents %}
+  <form class="create-form" method="POST">
+    <div>
+      <h1>Create Tournament</h1>
+      {{ result_error }}
+      <div> 
+        <table>
+          <tr>
+            <td><label for="name">Tournament name</label></td>
+            <td><input type="text" name="name" id="name" placeholder="name"></td>
+          </tr>
+          <tr>
+            <td><label for="tournament_type">type</label></td>
+            <td>
+              <select name="tournament_type" id="tournament_type">
+                {% for tournament_type in tournament_types %}
+                  <option>{{ tournament_type.name }}</option>
+                {% endfor %}
+              </select>
+            </td>
+          </tr>
+          <tr>
+          <tr>
+            <td><label for="status">status</label></td>
+            <td>
+              <select name="status" id="status">
+                {% for status in statuses %}
+                  <option>{{ status }}</option>
+                {% endfor %}
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="description">description</label></td>
+            <td><textarea name="description" id="description" placeholder="tournament description / details"></textarea></td>
+          </tr>
+        </table>  
+        <button>create</button>
+      </div>
+    </div>
+  </form>
+{% endblock %}
